@@ -18,17 +18,15 @@
     <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.16.0/css/okta-sign-in.min.css" type="text/css" rel="stylesheet"/>
     <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.16.0/css/okta-theme.css" type="text/css" rel="stylesheet"/>
    </div>
-
-  <!-- The overlay -->
-<div id="myNav" class="overlay">
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Simple Web Page</h1>
+      <div id="messageBox" class="jumbotron">
     <a href="https://bankitomi26.github.io/index/">Login</a>
-   </div>
-    </head>
-<body>
-      <!-- where the sign-in form will be displayed -->
+      </div>
+        <!-- where the sign-in form will be displayed -->
       <div id="okta-login-container"></div>
     </div>
     <script type="text/javascript">
@@ -41,6 +39,7 @@
           display: 'page'
         }
       });
+      
 
       if (oktaSignIn.token.hasTokensInUrl()) {
         oktaSignIn.token.parseTokensFromUrl(
@@ -53,7 +52,7 @@
             oktaSignIn.tokenManager.add('idToken', idToken);
 
             window.location.hash='';
-            document.getElementById("messageBox").innerHTML = "https://bankitomi26.github.io/a/ "
+            document.getElementById("messageBox").innerHTML = "Hello, " + res.login + "! You are *still* logged in! :)";
           },
           function error(err) {
             console.error(err);
