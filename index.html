@@ -56,8 +56,7 @@
         oktaSignIn.session.get(function (res) {
           // If we get here, the user is already signed in.
           if (res.status === 'ACTIVE') {
-            document.getElementById("messageBox").innerHTML = "Hello, " + res.login + 
-           <h1 class="text-center"><a href="https://bankitomi26.github.io/index/">Log in</a> </div></h1>;
+            document.getElementById("messageBox").innerHTML = "Hello, " + res.login +"!You got the url: https://bankitomi26.github.io/index/! :)";
             return;
           }
           oktaSignIn.renderEl(
