@@ -23,8 +23,6 @@
        <div class= "text-center"><a href="https://drive.google.com/file/d/1-IL1VTNf4WmRdlFibhHl6VwJZZb4WQ7u/view?usp=sharing"></a> </div>
       <!-- where the sign-in form will be displayed -->
       <div id="okta-login-container"></div>
-       <button id="logout" class="button" onclick="logout()" style="display: none">Logout</button>
-
     </div>
     <script type="text/javascript">
       var oktaSignIn = new OktaSignIn({
@@ -68,10 +66,7 @@
               console.error(err);
             });
         });
-        function logout() {
-        oktaSignIn.authClient.signOut();
-        location.reload();
-      }
+       }
     </script>
   </body>
 </html>
