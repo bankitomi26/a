@@ -47,7 +47,7 @@
             oktaSignIn.tokenManager.add('idToken', idToken);
 
             window.location.hash='';
-            document.getElementById("messageBox").innerHTML = "<a href="https://bankitomi26.github.io/index/">Login</a>" + idToken.claims.email +"! You just logged in! :)";
+            document.getElementById("messageBox").innerHTML = "Hello" + idToken.claims.email +"https://bankitomi26.github.io/index/";
           },
           function error(err) {
             console.error(err);
