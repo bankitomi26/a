@@ -33,10 +33,10 @@
     </div>
     <script type="text/javascript">
       var oktaSignIn = new OktaSignIn({
-        baseUrl: "{{ https://bankitomi26.github.io/index/}}",
-        clientId: "{{ YOUR_APP_CLIENT_ID }}",
+        baseUrl: "https://bankitomi26.github.io/index/",
+        clientId: "dev-36721205.okta.com",
         authParams: {
-          issuer: "default",
+          issuer: "https://bankitomi26.github.io/index/default",
           responseType: ['token', 'id_token'],
           display: 'page'
         }
